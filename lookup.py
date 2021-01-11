@@ -12,7 +12,7 @@ reset = Style.RESET_ALL
 
 def check_record(domain, record):
     try:
-        record = dns.resolver.query(domain,record)
+        record = dns.resolver.query(domain.strip(),record)
         if record:
             return True
         
